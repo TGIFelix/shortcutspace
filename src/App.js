@@ -15,6 +15,8 @@ export default function App() {
   const Vscode = lazy(() => importMDX('./docs/vscode.mdx'))
   const Help = lazy(() => importMDX('./docs/help.mdx'))
   const Ls = lazy(() => importMDX('./docs/ls.mdx'))
+  const Template = lazy(() => importMDX('./docs/template.mdx'))
+
 
 
   // Welcome Message
@@ -61,15 +63,19 @@ export default function App() {
     macos:
       <Suspense fallback={<div>Loading...</div>}>
         <Macos />
-      </Suspense>, 
+      </Suspense>,
+    template:
+      <Suspense fallback={<div>Loading...</div>}>
+        <Template />
+      </Suspense>,
     tgifelix: <a href="https://www.tgifelix.com" target="_blank" rel="noreferrer">www.tgifelix.com</a>,
     source: <a href="https://github.com/TGIFelix/shortcutspace" target="_blank" rel="noreferrer">github.com/tgifelix/shortcutspace</a>,
   };
 
-  // BADABING
+  // PROMPT
   return (
     <div className="App">
-      <ReactTerminal welcomeMessage={welcomeMessage} commands={commands} theme="dracula" prompt="❯" />
+      <ReactTerminal welcomeMessage={welcomeMessage} commands={commands} theme="dracula" prompt="❯" showControlButtons={true} errorMessage="Command not found"/>
     </div>
   );
 }
