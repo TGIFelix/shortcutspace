@@ -21,7 +21,7 @@ export default function App() {
 
   // Welcome Message
   const welcomeMessage = (
-    <div class="logo">
+    <div class="header">
       <span>
         <Suspense fallback={<div>Loading...</div>}>
           <Header />
@@ -74,7 +74,7 @@ export default function App() {
 
   // PROMPT
   return (
-    <div className="App">
+    <div className="term">
       <ReactTerminal welcomeMessage={welcomeMessage} commands={commands} theme="dracula" prompt="❯" showControlButtons={true} errorMessage="Command not found"/>
     </div>
   );
