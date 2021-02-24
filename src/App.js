@@ -69,7 +69,7 @@ export default function App() {
   // BADABING
   return (
     <div className="App">
-      <ReactTerminal welcomeMessage={welcomeMessage} commands={commands} theme="dracula" prompt=">" />
+      <ReactTerminal welcomeMessage={welcomeMessage} commands={commands} theme="dracula" prompt="❯" />
     </div>
   );
 }
