@@ -1,5 +1,9 @@
+:root {
+  background-color: #282a36;
+}
+
 body {
-  margin: 0;
+  margin: 0 0;
   /* font-family: "JetBrains Mono" !important; */
   /* font-family: "IBM Plex Mono" !important; */
 
