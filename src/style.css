@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
+:root {
+  font-family: "IBM Plex Mono" !important;
+}
+
 body {
   margin: 0;
-  /* font-family: "JetBrains Mono", monospace; */
-  font-family: "IBM Plex Mono" !important;
+  /* font-family: "JetBrains Mono" !important; */
+  /* font-family: "IBM Plex Mono" !important; */
 
 }
 
