@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
 :root {
   background-color: #282a36;
 }
 
 body {
   margin: 0 0;
-  /* font-family: "JetBrains Mono" !important; */
+  font-family: "JetBrains Mono" !important;
   /* font-family: "IBM Plex Mono" !important; */
-
 }
 
 .App {
@@ -43,3 +44,8 @@ th {
   color: #ffb86c;
 }
 
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 10px;
+  }
+}
