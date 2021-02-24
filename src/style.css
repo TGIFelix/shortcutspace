@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+body {
+  margin: 0;
+  /* font-family: "JetBrains Mono", monospace; */
+  font-family: "IBM Plex Mono" !important;
+
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+}
+
+.logo {
+  font-family: monospace;
+  white-space: pre;
+}
+
+ul {
+  list-style-type: none;
+}

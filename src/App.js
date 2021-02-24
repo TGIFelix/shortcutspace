@@ -1,70 +1,75 @@
-import React, {lazy, Suspense} from 'react';
-import "./App.css";
-import { ReactTerminal } from "react-terminal";
-import {importMDX} from 'mdx.macro';
+import React, {lazy, Suspense} from 'react'
+import "./style.css"
+import { ReactTerminal } from "react-terminal"
+import {importMDX} from 'mdx.macro'
 
 
 export default function App() {
-  const Logo = lazy(() => importMDX('./logo.mdx'))
-  const Vim = lazy(() => importMDX('./shortcuts/vim.mdx'))
-  const Emacs = lazy(() => importMDX('./shortcuts/emacs.mdx'))
-  const Macos = lazy(() => importMDX('./shortcuts/macos.mdx'))
-  const Vscode = lazy(() => importMDX('./shortcuts/vscode.mdx'))
+  // import markdown docs
+  const Header = lazy(() => importMDX('./docs/header.mdx'))
+  const Vim = lazy(() => importMDX('./docs/vim.mdx'))
+  const About = lazy(() => importMDX('./docs/about.mdx'))
+  const Contribute = lazy(() => importMDX('./docs/contribute.mdx'))
+  const Emacs = lazy(() => importMDX('./docs/emacs.mdx'))
+  const Macos = lazy(() => importMDX('./docs/macos.mdx'))
+  const Vscode = lazy(() => importMDX('./docs/vscode.mdx'))
+  const Help = lazy(() => importMDX('./docs/help.mdx'))
+  const Ls = lazy(() => importMDX('./docs/ls.mdx'))
 
 
-  const commands = {
-    help: <div>
-      <ul>
-        <li><b>help</b> [show this helpfull message]</li>
-        <li><b>clear</b> [clear screen]</li>
-        <li><b>shortcuts</b> [List available shortcuts]</li>
-        <li><b>tgifelix</b> [open authors website]</li>
-      </ul>
-    </div>,
-    shortcuts: <div>
-      <ul>
-        <li><b>vscode</b></li>
-        <li><b>emacs</b></li>
-        <li><b>vim</b></li>
-        <li><b>macos</b></li>
-      </ul>
-    </div>,
-    vim: <div>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Vim />
-            </Suspense>
-          </div>,
-    emacs:  <div>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Emacs />
-          </Suspense>
-        </div>,
-    vscode:  <div>
-    <Suspense fallback={<div>Loading...</div>}>
-      <Vscode />
-    </Suspense>
-  </div>,
-    macos: <div>
-    <Suspense fallback={<div>Loading...</div>}>
-      <Macos />
-    </Suspense>
-  </div>,
-    tgifelix: <a href="https://www.tgifelix.com" target="_blank" rel="noreferrer">tgifelix.com</a>
-  };
-
-const welcomeMessage = (
+  // Welcome Message
+  const welcomeMessage = (
     <div class="logo">
       <span>
         <Suspense fallback={<div>Loading...</div>}>
-          <Logo />
+          <Header />
         </Suspense>
       </span>
     </div>
   );
 
+ // Terminal commands
+  const commands = {
+    contribute:
+      <Suspense fallback={<div>Loading...</div>}>
+        <Contribute />
+      </Suspense>,
+    help:
+      <Suspense fallback={<div>Loading...</div>}>
+        <Help />
+      </Suspense>,
+    about:
+      <Suspense fallback={<div>Loading...</div>}>
+        <About />
+      </Suspense>,
+    ls:
+      <Suspense fallback={<div>Loading...</div>}>
+        <Ls />
+      </Suspense>,
+    vim:
+      <Suspense fallback={<div>Loading...</div>}>
+        <Vim />
+      </Suspense>,
+    emacs:
+      <Suspense fallback={<div>Loading...</div>}>
+        <Emacs />
+      </Suspense>,
+    vscode:
+      <Suspense fallback={<div>Loading...</div>}>
+        <Vscode />
+    </Suspense>,
+    macos:
+      <Suspense fallback={<div>Loading...</div>}>
+        <Macos />
+      </Suspense>, 
+    tgifelix: <a href="https://www.tgifelix.com" target="_blank" rel="noreferrer">www.tgifelix.com</a>,
+    source: <a href="https://github.com/TGIFelix/shortcutspace" target="_blank" rel="noreferrer">github.com/tgifelix/shortcutspace</a>,
+  };
+
+  // BADABING
   return (
     <div className="App">
-      <ReactTerminal welcomeMessage={welcomeMessage} commands={commands} theme="dracula" prompt=">"  showControlButtons={true}/>
+      <ReactTerminal welcomeMessage={welcomeMessage} commands={commands} theme="dracula" prompt=">" />
     </div>
   );
 }
