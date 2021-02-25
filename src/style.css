@@ -64,6 +64,9 @@ th {
 td {
   color: var(--white);
 }
+td:hover {
+  color: var(--cyan)
+}
 
 b,
 strong {
