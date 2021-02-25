@@ -23,8 +23,8 @@ body {
   font-family: "JetBrains Mono" !important;
   color: var(--white);
   margin: 0;
-  height: 100vh;
   overflow: hidden;
+  height: 100%;
 }
 
 a,
@@ -92,11 +92,16 @@ blockquote {
 }
 
 @media screen and (max-width: 600px) {
+  p {
+    font-size: 1em;
+  }
   table {
     width: 100%;
+    font-size: 0.8em;
   }
   th {
     text-align: center;
+    font-size: 1em;
   }
   td {
     text-align: center;
