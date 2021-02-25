@@ -29,11 +29,11 @@ body {
 
 a,
 a:visited {
-  color: var(--green);
+  color: var(--green) !important;
 }
 
 a:hover {
-  color: var(--orange);
+  color: var(--orange) !important;
   text-decoration: none;
 }
 
