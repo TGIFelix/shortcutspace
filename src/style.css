@@ -28,9 +28,8 @@ body {
 }
 
 a,
-a:visited,
-a:active {
-  color: var(--green)
+a:visited {
+  color: var(--green);
 }
 
 a:hover {
