@@ -1,8 +1,8 @@
 import React, {lazy, Suspense} from 'react'
 import { ReactTerminal } from "react-terminal"
 import {importMDX} from 'mdx.macro'
+import './fonts/JetBrainsMono-Regular.ttf'
 import "./style.css"
-
 
 export default function App() {
   // import markdown docs
