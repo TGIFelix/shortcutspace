@@ -5,6 +5,7 @@
 | . | repeat last command |
 | u |  undo |
 | ctrl+r | redo |
+| :x | save and quit |
 | **Navigation** |
 | : [num] | jump to line number |
 | 0 | jump to start of line |
@@ -18,13 +19,37 @@
 | **Insert** |
 | i | insert at cursor |
 | I | insert at the beginning of the line |
-| o | insert blank line below current line |
-| O | insert blank line above current line |
+| o | insert line below current line |
+| O | insert line above current line |
 | cc | replace entire line |
+| **Visual Mode** |
+| v | visual mode |
+| ctrl+v | visual block mode | 
+| y | yank (copy) marked text |
+| d | delete marked text |
 | **Cut & Paste** |
 | yy | yank (copy) line |
 | p | paste after cursor |
 | P | paste before cursor |
 | dd | delete line |
+| **Search** |
+| /text | search for text |
+| ?text | search backwards for text |
+| n | next search result |
+| N | previous search result |
+| **Tabs & window** |
+| :tabe | new tab |
+| gt | next tab |
+| gT | previous tab |
+| ctrl+ws | split window horizontally |
+| ctrl+wv | split window vertically |
+| ctrl+ww | switch between windows |
+| ctrl+wq | close window |
+| **Save & Exit** |
+| :w | save(write) |
+| :wq | save and quit |
+| :x | save and quit |
+| :q | quit |
+| :q! | quit without saving |
 
-> source: [vimsheet](https://vimsheet.com/)
+---
