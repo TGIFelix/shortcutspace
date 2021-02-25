@@ -67,12 +67,12 @@ export default function App() {
 
   // Terminal
   return (
-    <div className="term">
+    <div className="app">
       <ReactTerminal
       welcomeMessage={welcomeMessage}
       commands={commands}
       prompt="❯" 
-      showControlButtons={false}
+      showControlButtons={true}
       errorMessage="Command not found"
       themes={{
         draculaTheme: {
