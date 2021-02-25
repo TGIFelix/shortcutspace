@@ -23,7 +23,7 @@ body {
   color: var(--white);
   margin: 0;
   /* height: 100vh; */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .term {
