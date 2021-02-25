@@ -1,7 +1,7 @@
 import React, {lazy, Suspense} from 'react'
-import "./style.css"
 import { ReactTerminal } from "react-terminal"
 import {importMDX} from 'mdx.macro'
+import "./style.css"
 
 
 export default function App() {
@@ -16,8 +16,6 @@ export default function App() {
   const Help = lazy(() => importMDX('./docs/help.mdx'))
   const Ls = lazy(() => importMDX('./docs/ls.mdx'))
   const Template = lazy(() => importMDX('./docs/template.mdx'))
-
-
 
   // Welcome Message
   const welcomeMessage = (
@@ -72,7 +70,7 @@ export default function App() {
     source: <a href="https://github.com/TGIFelix/shortcutspace" target="_blank" rel="noreferrer">github.com/tgifelix/shortcutspace</a>,
   };
 
-  // PROMPT
+  // Terminal
   return (
     <div className="term">
       <ReactTerminal welcomeMessage={welcomeMessage} commands={commands} theme="dracula" prompt="❯" showControlButtons={true} errorMessage="Command not found"/>
