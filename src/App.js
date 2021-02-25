@@ -72,12 +72,12 @@ export default function App() {
       welcomeMessage={welcomeMessage}
       commands={commands}
       prompt="❯" 
-      showControlButtons={false}
+      showControlButtons={true}
       errorMessage="Command not found"
       themes={{
         draculaTheme: {
           themeBGColor: "#282a36",
-          themeToolbarColor: "#282a36",
+          themeToolbarColor: "#f8f8f2",
           themeColor: "#f8f8f2",
           themePromptColor: "#ff79c6"
         }

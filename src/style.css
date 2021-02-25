@@ -23,19 +23,19 @@ body {
   font-family: "JetBrains Mono" !important;
   color: var(--white);
   margin: 0;
-  /* height: 100vh; */
-  /* overflow: hidden; */
-}
-
-.term {
-  width: 100%;
   height: 100vh;
-  font-family: "JetBrains Mono" !important;
+  overflow: hidden;
 }
 
-.header {
-  white-space: pre;
-  font-family: "JetBrains Mono" !important;
+a,
+a:visited,
+a:active {
+  color: var(--green)
+}
+
+a:hover {
+  color: var(--orange);
+  text-decoration: none;
 }
 
 ul {
@@ -75,7 +75,18 @@ code {
 }
 
 blockquote {
-  color: var(--orange)
+  color: var(--yellow)
+}
+
+.term {
+  width: 100%;
+  height: 100vh;
+  font-family: "JetBrains Mono" !important;
+}
+
+.header {
+  white-space: pre;
+  font-family: "JetBrains Mono" !important;
 }
 
 @media screen and (max-width: 600px) {
