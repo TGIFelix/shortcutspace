@@ -1,6 +1,7 @@
 :root {
   --background: #282a36;
   --focus: #44475a;
+  --code: #6272a4;
   --white: #f8f8f2;
   --cyan: #8be9fd;
   --green: #50fa7b;
@@ -70,7 +71,11 @@ strong {
 }
 
 code {
-  color: var(--focus)
+  color: var(--code)
+}
+
+blockquote {
+  color: var(--orange)
 }
 
 @media screen and (max-width: 600px) {

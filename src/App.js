@@ -68,7 +68,21 @@ export default function App() {
   // Terminal
   return (
     <div className="term">
-      <ReactTerminal welcomeMessage={welcomeMessage} commands={commands} theme="dracula" prompt="❯" showControlButtons={true} errorMessage="Command not found"/>
+      <ReactTerminal
+      welcomeMessage={welcomeMessage}
+      commands={commands}
+      prompt="❯" 
+      showControlButtons={false}
+      errorMessage="Command not found"
+      themes={{
+        draculaTheme: {
+          themeBGColor: "#282a36",
+          themeToolbarColor: "#282a36",
+          themeColor: "#f8f8f2",
+          themePromptColor: "#ff79c6"
+        }
+      }}
+      theme="draculaTheme"/>
     </div>
   );
 }
