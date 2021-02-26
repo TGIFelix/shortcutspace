@@ -81,6 +81,12 @@ blockquote {
   color: var(--yellow)
 }
 
+i,
+em {
+  font-style: normal;
+  color: var(--pink);
+}
+
 .app {
   width: 100%;
   height: 100vh;
