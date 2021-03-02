@@ -18,7 +18,7 @@ export default function App() {
 
   // Welcome Message
   const welcomeMessage = (
-    <div class="header">
+    <div className="header">
       <span>
         <Suspense fallback={<div>Loading...</div>}>
           <Header />
