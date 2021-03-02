@@ -18,8 +18,14 @@
 .env.test.local
 .env.production.local
 
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# deployment
 .vercel
+
+# formatting
+.prettierrc
+.eslinrc.js
