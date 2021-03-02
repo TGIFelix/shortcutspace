@@ -32,6 +32,10 @@ a:visited {
   color: var(--green) !important;
 }
 
+p {
+  max-width: 90%;
+}
+
 a:hover {
   color: var(--orange) !important;
   text-decoration: none;
