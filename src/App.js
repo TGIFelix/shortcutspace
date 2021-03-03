@@ -5,16 +5,19 @@ import './fonts/JetBrainsMono-Regular.ttf'
 import "./style.css"
 
 export default function App() {
-  // import markdown docs
-  const Header = lazy(() => importMDX('./docs/header.mdx'))
+  // import components
+  const Header = lazy(() => importMDX('./lib/header.mdx'))
+  const About = lazy(() => importMDX('./lib/about.mdx'))
+  const Contribute = lazy(() => importMDX('./lib/contribute.mdx')) 
+  const Help = lazy(() => importMDX('./lib/help.mdx'))
+  const Ls = lazy(() => importMDX('./lib/ls.mdx'))
+
+  // import docs
   const Vim = lazy(() => importMDX('./docs/vim.mdx'))
-  const About = lazy(() => importMDX('./docs/about.mdx'))
-  const Contribute = lazy(() => importMDX('./docs/contribute.mdx'))
   const Emacs = lazy(() => importMDX('./docs/emacs.mdx'))
   const Macos = lazy(() => importMDX('./docs/macos.mdx'))
   const Vscode = lazy(() => importMDX('./docs/vscode.mdx'))
-  const Help = lazy(() => importMDX('./docs/help.mdx'))
-  const Ls = lazy(() => importMDX('./docs/ls.mdx'))
+
 
   // Welcome Message
   const welcomeMessage = (
