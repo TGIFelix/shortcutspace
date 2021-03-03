@@ -35,13 +35,6 @@ a:visited {
 p {
   max-width: 90%;
 }
-h1,
-h2,
-h3 {
-  color: var(--pink);
-  font-family: "JetBrains Mono";
-  padding: 0 3em 0;
-}
 
 a:hover {
   color: var(--orange) !important;
@@ -60,11 +53,11 @@ th {
 }
 
 table {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0 auto;
   font-family: "JetBrains Mono" !important;
-  padding: 0 0 3em;
+  padding: 0 0 1em;
 }
 
 th {
@@ -113,10 +106,6 @@ em {
 @media screen and (max-width: 600px) {
   p {
     font-size: 1em;
-  }
-  h3 {
-    padding: 0 auto;
-    text-align: center;
   }
   table {
     width: 100%;
